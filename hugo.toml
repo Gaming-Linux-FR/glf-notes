@@ -1,0 +1,4 @@
+baseURL = 'https://localhost/'
+languageCode = 'fr-fr'
+title = 'Base de connaissances GLF'
+theme = 'PaperMod'
