@@ -4,7 +4,7 @@
 
 ## Consulter
 
-Consultez le site en ligne sur github pages (à venir).
+Consultez [la base de connaissance GLF sur github pages](https://gaming-linux-fr.github.io/glf-notes/).
 
 ## Participer
 
@@ -12,26 +12,38 @@ Ce projet utilise le générateur de site [hugo](https://gohugo.io/) et les donn
 
 ### En ligne
 
-- Rendez-vous dans le dossier [content](content/)
-- Modifiez un fichier
-- Proposez une pull request
+Proposition de contenu :
+
+- Proposer le contenu dans [une issue]().
+
+Si vous avez les droits d'écriture :
+
+- Rendez-vous dans le dossier [content](content/).
+- Modifiez un fichier.
+- Proposez une pull request.
 
 ### En local
 
-Forkez le projet si vous n'avez pas les droits d'écriture, puis clonez le.
+Forkez ou clonez le projet (selon vos droits), puis l'utiliser en local.
+
+Installation :
 
 ```sh
 git clone https://github.com/darkone-linux/glf-notes.git
 cd glf-notes && ./bin/install.sh
 ```
 
-### Consulter en local
-
-On peut consulter le site en local et observer les modifications en temps réel de cette manière :
+Commandes utiles :
 
 ```sh
-./bin/launch-dev.sh
+# Lancer le site de développement
+./bin/launch-local.sh
+
+# Mise à jour complète du projet
+./bin/update.sh
+
+# Créer une page (remplacer <chemin> par l'url relative de la page)
+hugo new content <chemin>/index.md
 ```
 
-Le serveur hugo fournit l'adresse locale à utiliser dans son navigateur.
-
+Ce projet utilise le générateur de site statique [HUGO](https://gohugo.io/) avec le template [PaperMod](https://github.com/adityatelange/hugo-PaperMod/).
