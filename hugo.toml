@@ -1,4 +1,22 @@
-baseURL = 'https://localhost/'
+baseURL = 'https://gaming-linux-fr.github.io/'
 languageCode = 'fr-fr'
 title = 'Base de connaissances GLF'
 theme = 'PaperMod'
+
+[[menu.main]]
+identifier = 'faq'
+name = 'FAQ'
+url = '/faq/'
+weight = 6
+
+[[menu.main]]
+identifier = 'guides'
+name = 'Guides'
+url = '/guides/'
+weight = 8
+
+[[menu.main]]
+identifier = 'distribs'
+name = 'Distributions'
+url = '/distribs/'
+weight = 10
