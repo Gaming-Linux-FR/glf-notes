@@ -1,0 +1,168 @@
+enableInlineShortcodes: true
+enableEmoji: true
+enableRobotsTXT: true
+
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+paginate: 15 # articles per page
+
+mainSections:
+    - faq
+    - guides
+    - distribs
+
+minify:
+    disableXML: true
+    # minifyOutput: true
+
+permalinks:
+    post: "/:title/"
+    # post: "/:year/:month/:day/:title/"
+
+defaultContentLanguage: fr # prefer language
+defaultContentLanguageInSubdir: false
+
+languages:
+    fr:
+        languageName: "Français 🇫🇷"
+        contentDir: content
+        weight: 1
+        menu:
+            main:
+                - identifier: guides
+                  name: Guides
+                  url: guides
+                  weight: 2
+                - identifier: faq
+                  name: FAQ
+                  url: faq
+                  weight: 4
+                - identifier: distribs
+                  name: Distributions
+                  url: distribs
+                  weight: 6
+                - identifier: search
+                  name: Recherche
+                  url: search
+                  weight: 8
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Gaming Linux FR
+    author: GLF
+
+    defaultTheme: dark # defaultTheme: light or dark
+    disableThemeToggle: false
+    DateFormat: "02-01-2006"
+    ShowShareButtons: false
+    ShowReadingTime: true
+    # disableSpecialistPost: true
+    disableScrollToTop: false
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    hideFooter: true # hide foot
+    ShowWordCounts: true
+    VisitCount: true
+    ShowLastMod: true
+    ShowToc: true
+    TocOpen: true
+    comments: true
+
+    profileMode:
+        enabled: true
+        title: Gaming Linux FR
+        subtitle: "Base de Connaissances"
+        # imageUrl: "Avatar.png"
+        imageUrl: "GLF.png"
+        imageTitle: GLF
+        imageWidth: 150
+        imageHeight: 150
+        buttons:
+            - name: Guides
+              url: guides
+            - name: FAQ
+              url: faq
+            - name: Distribs
+              url: distribs
+
+    socialIcons:
+        - name: discord
+          url: "https://discord.gg/wYPfE7cR"
+        - name: github
+          url: "https://github.com/Gaming-Linux-FR"
+        #- name: email
+        #  url: "mailto:"
+
+    assets:
+        favicon: "GLF.png"
+        favicon16x16: "GLF.png"
+        favicon32x32: "GLF.png"
+        apple_touch_icon: "GLF.png"
+        safari_pinned_tab: "GLF.png"
+
+    label:
+        text: "Accueil"
+
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 1
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary"]
+
+    twikoo:
+        version: 1.4.11
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        # anchorLineNos: true
+        codeFences: true
+        guessSyntax: true
+        lineNos: true
+        # noClasses: false
+        style: monokai
+        lineNos: false
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
