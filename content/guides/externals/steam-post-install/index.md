@@ -1,10 +1,9 @@
 +++
 title = "Steam Linux post installation"
 author = ["Cardiac"]
-date = 2024-03-31
+date = 2024-03-25
 +++
 
-# Steam Linux post installation
 
 Tutoriel de post-installation de Steam sur Linux, conçu pour vous guider à travers quelques étapes clés afin d'optimiser votre expérience de jeu sur Linux.
 
@@ -36,7 +35,7 @@ Ajoutez des emplacements de stockage pour vos jeux en configurant des dossiers s
 
   <img width="850" src="Steam%20ajout%20de%20disque.png" alt="allowflipping">
 
-Si Steam **flatpak** : [Ajout disques secondaires Steam Flatpak](https://github.com/Gaming-Linux-FR/glf-astuces/blob/main/README.md#acc%C3%A8s-%C3%A0-un-second-disque-sur-steam-flatpak)
+Si Steam **flatpak** : [Ajout disques secondaires Steam Flatpak](README.md#acc%C3%A8s-%C3%A0-un-second-disque-sur-steam-flatpak)
 
 ## Steam input
 

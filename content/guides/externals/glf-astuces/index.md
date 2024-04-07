@@ -1,7 +1,7 @@
 +++
 title = "GLF Astuces"
 author = ["Angedestenebres", "Cardiac", "Didic"]
-date = 2024-04-05
+date = 2024-03-09
 +++
 
 ---

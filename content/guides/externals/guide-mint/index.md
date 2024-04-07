@@ -1,10 +1,9 @@
 +++
 title = "Guide Complet Linux Mint pour Multimédia et Gaming"
 author = ["Angedestenebres", "Cardiac", "Didic", "vinceff"]
-date = 2024-04-03
+date = 2024-03-27
 +++
 
-# Guide Complet Linux Mint pour Multimédia et Gaming
 
 Bienvenue dans ce guide détaillé pour configurer Linux Mint, pour le multimédia et le gaming. Voici une approche étape par étape pour tirer le meilleur parti de votre système.
 

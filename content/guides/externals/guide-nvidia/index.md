@@ -1,10 +1,9 @@
 +++
 title = "Guide d'installation des pilotes NVIDIA sur Linux pour cartes récentes"
 author = ["Cardiac", "cardiacman13", "Didic"]
-date = 2024-03-30
+date = 2024-03-04
 +++
 
-# Guide d'installation des pilotes NVIDIA sur Linux pour cartes récentes
 
 Ce guide est destiné aux utilisateurs de cartes graphiques NVIDIA récentes sous Linux. Il couvre les étapes d'installation des pilotes NVIDIA sur différentes distributions Linux, y compris Fedora, Debian, et openSUSE Tumbleweed. Avant de procéder à l'installation, assurez-vous que votre carte graphique est prise en charge par les derniers pilotes Nvidia.
 
@@ -64,7 +63,7 @@ Lancez le panneau de configuration Nvidia
 Dans la fenêtre des paramètres Nvidia, naviguez jusqu'à la section des paramètres OpenGL et désactivez l'option suivante :
 - **Allow Flipping**
 
-  <img width="850" src="https://github.com/Gaming-Linux-FR/guide-nvidia/blob/main/screenshot/allowflipping.png" alt="allowflipping">
+  <img width="850" src="screenshot/allowflipping.png" alt="allowflipping">
 
 ### 3. Pour tous les DE sauf KDE :
 
@@ -82,7 +81,7 @@ __GL_SYNC_DISPLAY_DEVICE=DP-0
 
 Remplacez DP-0 par l'écran avec la fréquence de rafraichissement la plus élevée. On peut voir ça dans le panneau nvidia-settings :
 
-  <img width="850" src="https://github.com/Gaming-Linux-FR/guide-nvidia/blob/main/screenshot/ecran.png" alt="ecran">
+  <img width="850" src="screenshot/ecran.png" alt="ecran">
 
 ### 4. Pour KDE :
 
@@ -180,7 +179,7 @@ Pour savoir quelle carte graphique est actuellement utilisée pour l'affichage d
 glxinfo | grep "OpenGL renderer"
 ```
 
-  <img width="850" src="https://github.com/Gaming-Linux-FR/guide-nvidia/blob/main/screenshot/glxinfo.png" alt="glxinfo">
+  <img width="850" src="screenshot/glxinfo.png" alt="glxinfo">
 
 Il est préférable que le retour indique l'utilisation d'Intel, car il n'est pas nécessaire d'utiliser la carte Nvidia pour des tâches telles que la navigation sur le web, le traitement de texte, et autres activités similaires. Utiliser Nvidia pour ces tâches pourrait inutilement augmenter la température de votre PC et réduire la durée de vie de la batterie.
 
@@ -192,7 +191,7 @@ Pour voir ce que fait votre carte graphique Nvidia, utilisez la commande :
 nvidia-smi
 ```
 
-  <img width="850" src="https://github.com/Gaming-Linux-FR/guide-nvidia/blob/main/screenshot/nvidia-smi.png" alt="nvidia-smi">
+  <img width="850" src="screenshot/nvidia-smi.png" alt="nvidia-smi">
 
 Si une application utilise Nvidia, elle apparaîtra dans la liste affichée par cette commande. 
 

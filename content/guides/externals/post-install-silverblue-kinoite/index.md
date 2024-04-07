@@ -1,10 +1,9 @@
 +++
 title = "Configuration de Fedora Silverblue ou Kinoite"
 author = ["Cardiac", "cardiacman13", "Didic"]
-date = 2024-04-05
+date = 2024-03-02
 +++
 
-# Configuration de Fedora Silverblue ou Kinoite
 
 ## Table des Matières
 

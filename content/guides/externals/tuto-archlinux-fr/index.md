@@ -1,10 +1,9 @@
 +++
 title = "🐧 ARCHITECT TUTO 📜"
 author = ["Cardiac", "cardiacman13", "Darkone"]
-date = 2024-04-06
+date = 2023-12-03
 +++
 
-# 🐧 ARCHITECT TUTO 📜
 
 ## **Table des Matières**
 

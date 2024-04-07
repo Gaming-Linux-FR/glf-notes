@@ -33,7 +33,16 @@ if [ ! -f "README.md" ] ;then
   exit 1
 fi
 
-TITLE=$(cat README.md | head -n 1 | sed 's/^#  *//')
+TITLE=$2
+if [ "x$TITLE" == "x" ] ;then
+  TITLE=$(cat README.md | head -n 1 | sed 's/^#  *//')
+fi
+
+TAIL=$3
+if [ "x$TAIL" == "x" ] ;then
+  TAIL='+2'
+fi
+
 AUTHORS='['`git log \
   | tail -n +2 \
   | grep -e ^Author: \
@@ -41,7 +50,7 @@ AUTHORS='['`git log \
   | sort | uniq -c | sort -k2 \
   | awk '{printf("\"%s\", ",$2)}END{print}' \
   | sed 's/,[^,]*$//'`']'
-FIRST_DATE=`git log --reverse -1 --pretty=format:'%ad' --date=short`
+FIRST_DATE=$(git log `git rev-list --max-parents=0 HEAD` --pretty=format:'%ad' --date=short)
 EXTRACTOR=`git config user.name`
 NOW_DATE=`date +%d/%m/%Y`
 
@@ -59,7 +68,9 @@ echo '+++' >> $PROJECT_FILE
 echo >> $PROJECT_FILE
 
 cat README.md \
+  | tail -n $TAIL \
   | sed 's/^<.*>$//g' \
+  | sed 's#https[^ "]*/blob/main/##g' \
   | sed 's/^\(!\[.*)\), *$/\1/' \
   | tr '\n' '\r' \
   | sed -e 's/\r\r\r\r*/\r\r/g' \
@@ -73,6 +84,8 @@ rsync -av \
   --exclude '*.md' \
   --exclude '*.sh' \
   --exclude '.git' \
-  --exclude LICENCE ./ $PROJECT_DIR/
+  --exclude LICENCE \
+  --exclude LICENSE \
+  ./ $PROJECT_DIR/
 
 echo "Done"

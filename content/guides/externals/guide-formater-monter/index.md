@@ -4,11 +4,10 @@ author = ["Cardiac", "Didic"]
 date = 2024-04-02
 +++
 
-# Guide débutant pour formater et monter au démarrage ses disques / SSD internes sur Linux
 
 Vidéo de démonstration en utilisant Partition Manager de Plasma au lieu de Gnome Disque : 
 
-[ Formater et monter au démarrage un SSD ou disque interne sur Linux ](https://www.youtube.com/watch?v=z7aqPGs_YWQ)
+<img src="assets/images/Cardiac-icon.png" width="30" height="30"> [ Formater et monter au démarrage un SSD ou disque interne sur Linux ](https://www.youtube.com/watch?v=z7aqPGs_YWQ)
 
 ## Formater
 
