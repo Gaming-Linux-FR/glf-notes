@@ -25,7 +25,8 @@ else
   cd $PROJECT_ID
 fi
 
-PROJECT_FILE=$TARGET/$PROJECT_ID.md
+PROJECT_DIR=$TARGET/$PROJECT_ID
+PROJECT_FILE=$PROJECT_DIR/index.md
 
 if [ ! -f "README.md" ] ;then
   echo "No README.md file found"
@@ -48,6 +49,8 @@ if [[ "$EXTRACTOR" =~ "Darkone" ]] ;then
   EXTRACTOR='['$EXTRACTOR'](https://darkone.yt)'
 fi
 
+mkdir -p $PROJECT_DIR
+
 echo '+++' > $PROJECT_FILE
 echo 'title = "'$TITLE'"' >> $PROJECT_FILE
 echo 'author = '$AUTHORS >> $PROJECT_FILE
@@ -65,5 +68,11 @@ cat README.md \
 echo >> $PROJECT_FILE
 echo '---' >> $PROJECT_FILE
 echo '_Dernier import depuis ['$PROJECT_ID']('$PROJECT') le '$NOW_DATE' par '$EXTRACTOR'_' >> $PROJECT_FILE
+
+rsync -av \
+  --exclude '*.md' \
+  --exclude '*.sh' \
+  --exclude '.git' \
+  --exclude LICENCE ./ $PROJECT_DIR/
 
 echo "Done"
