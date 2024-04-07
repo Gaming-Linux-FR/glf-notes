@@ -1,6 +1,7 @@
 +++
 title = 'Guides et projets github'
 date = 2024-04-01T20:31:45-02:00
+author = ['Cardiac', 'Darkone Linux']
 +++
 
 ## Guides distributions

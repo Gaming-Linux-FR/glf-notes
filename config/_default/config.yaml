@@ -40,13 +40,17 @@ languages:
                   url: faq
                   weight: 4
                 - identifier: distribs
-                  name: Distributions
+                  name: Distribs
                   url: distribs
                   weight: 6
                 - identifier: search
                   name: Recherche
                   url: search
                   weight: 8
+                - identifier: about
+                  name: A propos
+                  url: about
+                  weight: 10
 
 outputs:
     home:
