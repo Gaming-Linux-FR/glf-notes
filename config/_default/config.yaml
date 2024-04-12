@@ -10,6 +10,7 @@ paginate: 15 # articles per page
 
 mainSections:
     - faq
+    - notes
     - guides
     - distribs
 
@@ -31,6 +32,10 @@ languages:
         weight: 1
         menu:
             main:
+                - identifier: notes
+                  name: Notes
+                  url: notes
+                  weight: 1
                 - identifier: guides
                   name: Guides
                   url: guides
@@ -92,6 +97,8 @@ params:
         imageWidth: 150
         imageHeight: 150
         buttons:
+            - name: Notes
+              url: notes
             - name: Guides
               url: guides
             - name: FAQ
